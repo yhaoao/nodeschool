@@ -6,6 +6,6 @@ var port = parseInt(process.argv[2], 10);
 var server = http.createServer(function(req, res) {
 	req.pipe(map(function(chunk) {
 		return chunk.toString().toUpperCase();
-	})).pipe(res)
+	})).pipe(res);
 })
 server.listen(port);
